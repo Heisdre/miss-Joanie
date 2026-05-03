@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Miss Joan ✿ links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf6f3;--blush:#f6d7e0;--rose:#e8b4c8;
+    --mauve:#c79bb8;--plum:#7d5a82;--deep:#4a2e4d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{overflow-x:hidden;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:
+      radial-gradient(circle at 20% 10%, #f9d6e6 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, #d9b8e0 0%, transparent 55%),
+      radial-gradient(circle at 50% 100%, #ffe4ec 0%, transparent 60%),
+      linear-gradient(180deg, #fdf6f3 0%, #f4e1ec 100%);
+    background-attachment: fixed;
+    color:var(--deep);min-height:100vh;position:relative;
+    padding: 48px 24px 80px;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;
+    opacity:.35;z-index:1;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.3  0 0 0 0 0.5  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .deco{position:absolute;pointer-events:none;z-index:0;opacity:.55;}
+  .deco.s1{top:8%;left:-40px;font-size:120px;color:#e8b4c8;transform:rotate(-15deg);}
+  .deco.s2{top:5%;right:-20px;font-size:90px;color:#c79bb8;transform:rotate(20deg);}
+  .deco.s3{bottom:10%;left:-30px;font-size:100px;color:#d9a8c8;transform:rotate(10deg);}
+  .deco.s4{bottom:5%;right:-30px;font-size:80px;color:#e8b4c8;transform:rotate(-25deg);}
+
+.wrap{position:relative;z-index:2;max-width:440px;margin:0 auto;text-align:center;}
+
+/* Music toggle button */
+.music-btn{
+position:fixed;top:20px;right:20px;z-index:100;
+width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+background:rgba(255,255,255,.7);
+backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);
+border:1px solid rgba(255,255,255,.8);
+box-shadow:0 4px 16px rgba(199,155,184,.3);
+display:flex;align-items:center;justify-content:center;
+color:var(–plum);font-size:18px;
+transition: all .3s ease;
+opacity:0;animation: rise .9s ease forwards 1s;
+}
+.music-btn:hover{transform:scale(1.08);background:rgba(255,255,255,.9);}
+.music-btn.playing{background:linear-gradient(135deg,#f8c8d4,#c79bb8);color:white;}
+.music-btn .pulse{
+position:absolute;inset:-4px;border-radius:50%;
+border:2px solid var(–rose);opacity:0;
+}
+.music-btn.playing .pulse{
+animation: pulse 2s ease-out infinite;
+}
+@keyframes pulse{
+0%{opacity:.6;transform:scale(1);}
+100%{opacity:0;transform:scale(1.4);}
+}
+
+.crown{
+font-size:14px;letter-spacing:.5em;text-transform:uppercase;
+color:var(–plum);margin-bottom:18px;
+opacity:0;animation: rise .9s ease forwards .1s;
+}
+.crown::before, .crown::after{content:“✦”;margin:0 14px;color:var(–rose);letter-spacing:0;}
+
+.avatar{
+width:140px;height:140px;border-radius:50%;margin:0 auto 22px;
+background-color: #fce4ec;
+background-image: url(“avatar.jpg”);
+background-size: cover;background-position: center;
+box-shadow:
+0 12px 44px rgba(199,155,184,.4),
+0 0 0 6px rgba(255,255,255,.7),
+0 0 0 7px rgba(232,180,200,.5),
+0 0 0 14px rgba(255,255,255,.25);
+opacity:0;transform:scale(.85);
+animation: pop .9s cubic-bezier(.34,1.56,.64,1) forwards .25s;
+}
+
+h1{
+font-family:‘Italiana’,serif;font-size:54px;font-weight:400;
+letter-spacing:.02em;line-height:1;color:var(–deep);margin-bottom:10px;
+opacity:0;animation: rise .9s ease forwards .4s;
+}
+h1 em{font-family:‘Cormorant Garamond’,serif;font-style:italic;font-weight:400;color:var(–plum);}
+
+.tagline{
+font-family:‘Cormorant Garamond’,serif;font-style:italic;
+font-size:19px;color:var(–mauve);margin-bottom:14px;line-height:1.4;
+opacity:0;animation: rise .9s ease forwards .55s;
+}
+
+.bio{
+font-family:‘Cormorant Garamond’,serif;font-size:16px;font-weight:400;
+color:var(–plum);line-height:1.7;
+max-width:380px;margin:0 auto;
+opacity:0;animation: rise .9s ease forwards .65s;
+}
+.bio .accent{color:var(–rose);font-style:italic;}
+
+.divider{
+display:flex;align-items:center;justify-content:center;gap:10px;
+margin: 22px auto 32px;
+opacity:0;animation: rise .9s ease forwards .8s;
+}
+.divider .line{height:1px;width:48px;background:linear-gradient(90deg, transparent, var(–rose), transparent);}
+.divider .dot{color:var(–rose);font-size:10px;}
+
+.links{display:flex;flex-direction:column;gap:14px;}
+.link{
+display:flex;align-items:center;gap:16px;padding:18px 22px;
+background:rgba(255,255,255,.55);
+backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);
+border:1px solid rgba(255,255,255,.7);border-radius:22px;
+color:var(–deep);text-decoration:none;
+box-shadow:0 4px 20px rgba(199,155,184,.18),inset 0 1px 0 rgba(255,255,255,.9);
+transition: all .35s cubic-bezier(.4,0,.2,1);
+position:relative;overflow:hidden;
+opacity:0;transform: translateY(14px);animation: rise .7s ease forwards;
+}
+.link:nth-child(1){animation-delay:.95s;}
+.link:nth-child(2){animation-delay:1.05s;}
+.link:nth-child(3){animation-delay:1.15s;}
+.link:nth-child(4){animation-delay:1.25s;}
+
+.link::before{
+content:””;position:absolute;top:0;left:-100%;width:100%;height:100%;
+background:linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent);
+transition: left .6s ease;
+}
+.link:hover::before{left:100%;}
+.link:hover{
+transform: translateY(-3px);
+box-shadow:0 12px 30px rgba(199,155,184,.3),inset 0 1px 0 rgba(255,255,255,1);
+background:rgba(255,255,255,.75);
+}
+
+.icon{
+width:44px;height:44px;border-radius:14px;
+display:flex;align-items:center;justify-content:center;flex-shrink:0;
+box-shadow: 0 4px 12px rgba(199,155,184,.25);
+}
+.icon svg{width:22px;height:22px;}
+.icon.tt{background:linear-gradient(135deg,#f8c8d4,#e8a5bd);}
+.icon.yt{background:linear-gradient(135deg,#f5b8c5,#d99cb8);}
+.icon.ig{background:linear-gradient(135deg,#fcc7d8,#c79bb8);}
+.icon.sc{background:linear-gradient(135deg,#fde0a8,#f5b8c5);}
+
+.label{flex:1;text-align:left;}
+.label .platform{
+font-family:‘Cormorant Garamond’,serif;font-size:13px;font-style:italic;
+color:var(–plum);letter-spacing:.15em;text-transform:uppercase;
+display:block;margin-bottom:2px;
+}
+.label .handle{font-family:‘Italiana’,serif;font-size:19px;color:var(–deep);letter-spacing:.02em;}
+
+.arrow{color:var(–mauve);font-size:18px;transition: transform .35s ease;}
+.link:hover .arrow{transform: translateX(4px);}
+
+.featured-title{
+font-family:‘Italiana’,serif;font-size:32px;color:var(–deep);
+margin: 56px 0 8px;
+opacity:0;animation: rise .9s ease forwards 1.35s;
+}
+.featured-title em{font-family:‘Cormorant Garamond’,serif;font-style:italic;color:var(–plum);}
+.featured-sub{
+font-family:‘Cormorant Garamond’,serif;font-style:italic;
+font-size:15px;color:var(–mauve);margin-bottom:28px;
+opacity:0;animation: rise .9s ease forwards 1.45s;
+}
+
+.videos{display:flex;flex-direction:column;gap:24px;align-items:center;}
+.video-card{
+width:100%;padding:14px;
+background:rgba(255,255,255,.55);
+backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);
+border:1px solid rgba(255,255,255,.7);border-radius:24px;
+box-shadow:0 8px 28px rgba(199,155,184,.22),inset 0 1px 0 rgba(255,255,255,.9);
+opacity:0;transform: translateY(14px);animation: rise .8s ease forwards;
+}
+.video-card:nth-of-type(1){animation-delay:1.55s;}
+.video-card:nth-of-type(2){animation-delay:1.7s;}
+.video-card blockquote{margin:0 !important;border-radius:14px;overflow:hidden;}
+
+footer{
+margin-top:56px;text-align:center;
+font-family:‘Cormorant Garamond’,serif;font-style:italic;
+font-size:13px;color:var(–mauve);letter-spacing:.1em;
+opacity:0;animation: rise .9s ease forwards 1.9s;
+}
+footer .heart{color:var(–rose);}
+
+@keyframes rise{to{opacity:1;transform:translateY(0);}}
+@keyframes pop{to{opacity:1;transform:scale(1);}}
+
+@media (max-width:480px){
+h1{font-size:44px;}
+.avatar{width:120px;height:120px;}
+.label .handle{font-size:17px;}
+.featured-title{font-size:28px;}
+.bio{font-size:15px;}
+}
+</style>
+
+</head>
+<body>
+
+<!-- Music toggle -->
+
+<button class="music-btn" id="musicBtn" aria-label="Toggle music">
+  <span class="pulse"></span>
+  <span id="musicIcon">♪</span>
+</button>
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2024/02/05/audio_d1b3aa10b9.mp3" type="audio/mpeg">
+</audio>
+
+<span class="deco s1">✿</span>
+<span class="deco s2">❀</span>
+<span class="deco s3">✿</span>
+<span class="deco s4">❀</span>
+
+<div class="wrap">
+
+  <div class="crown">welcome darling</div>
+
+  <div class="avatar"></div>
+
+  <h1>Miss <em>Joan</em></h1>
+  <p class="tagline">beauty · lifestyle · a little bit of magic</p>
+  <p class="bio">
+    your fav <span class="accent">beauty &amp; lifestyle bestie</span> ✿ sharing soft glam looks, get-ready-with-me's, honest product reviews &amp; the little daily moments that make life feel pretty. come hang out — i post all the things i wish someone had told me sooner 🤍
+  </p>
+
+  <div class="divider">
+    <span class="line"></span>
+    <span class="dot">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <div class="links">
+
+```
+<a class="link" href="https://www.tiktok.com/@joaniexoxo15" target="_blank" rel="noopener">
+  <span class="icon tt">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.55a8.16 8.16 0 0 0 4.77 1.52V6.69h-1.84z"/></svg>
+  </span>
+  <span class="label">
+    <span class="platform">TikTok</span>
+    <span class="handle">@joaniexoxo15</span>
+  </span>
+  <span class="arrow">→</span>
+</a>
+
+<a class="link" href="https://youtube.com/@joaniexoxo52" target="_blank" rel="noopener">
+  <span class="icon yt">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 4 12 4 12 4s-7.5 0-9.4.4A3 3 0 0 0 .5 6.5C.1 8.4.1 12 .1 12s0 3.6.4 5.5a3 3 0 0 0 2.1 2.1c1.9.4 9.4.4 9.4.4s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1c.4-1.9.4-5.5.4-5.5s0-3.6-.4-5.5zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+  </span>
+  <span class="label">
+    <span class="platform">YouTube</span>
+    <span class="handle">@joaniexoxo52</span>
+  </span>
+  <span class="arrow">→</span>
+</a>
+
+<a class="link" href="https://www.instagram.com/joaniexoxo15" target="_blank" rel="noopener">
+  <span class="icon ig">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0 2.2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.7a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.8a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm5.1-2.1a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+  </span>
+  <span class="label">
+    <span class="platform">Instagram</span>
+    <span class="handle">@joaniexoxo15</span>
+  </span>
+  <span class="arrow">→</span>
+</a>
+
+<a class="link" href="https://www.snapchat.com/add/joaniexoxo1" target="_blank" rel="noopener">
+  <span class="icon sc">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M12.2 2c2.4 0 5.2 1.4 6.3 4.3.4 1.1.3 3 .2 4.4v.2l.1.1c.2.1.4.2.8.2.4 0 1-.2 1.6-.5.2-.1.4-.1.5-.1.2 0 .4 0 .6.1.5.2.6.6.6.9 0 .5-.5.9-1.5 1.3-.1.1-.3.1-.5.2-.5.2-1.4.4-1.6 1-.1.3 0 .7.4 1.2v.1c.1.2 1.6 3.4 4.7 3.9.3 0 .5.3.4.6 0 .1-.1.2-.1.3-.4.9-2 1.5-4.7 2-.1.2-.2.5-.3 1-.1.2-.1.4-.2.6-.1.4-.4.6-.8.6h-.2c-.2 0-.4-.1-.7-.1-.4-.1-.8-.2-1.4-.2-.4 0-.7 0-1.1.1-.7.1-1.4.6-2.1 1.1-1 .7-2.1 1.5-3.7 1.5h-.3c-1.6 0-2.7-.8-3.7-1.5-.7-.5-1.4-1-2.1-1.1-.4-.1-.8-.1-1.1-.1-.6 0-1.1.1-1.4.2-.3.1-.5.1-.7.1-.6 0-.8-.4-.9-.6-.1-.2-.1-.4-.2-.6-.1-.4-.2-.8-.3-1-2.7-.4-4.3-1.1-4.7-2-.1-.1-.1-.2-.1-.3 0-.3.2-.5.4-.6 3.1-.5 4.6-3.7 4.7-3.9v-.1c.4-.5.5-.9.4-1.2-.2-.5-1.1-.8-1.6-1-.2-.1-.4-.1-.5-.2-1.3-.5-1.4-1-1.4-1.3 0-.4.3-.7.7-.9.2-.1.4-.1.6-.1.2 0 .3 0 .5.1.7.3 1.2.5 1.7.5.4 0 .7-.1.8-.2l.1-.1v-.2c-.1-1.4-.2-3.3.2-4.4C7 3.4 9.8 2 12.2 2z"/></svg>
+  </span>
+  <span class="label">
+    <span class="platform">Snapchat</span>
+    <span class="handle">joaniexoxo1</span>
+  </span>
+  <span class="arrow">→</span>
+</a>
+```
+
+  </div>
+
+  <h2 class="featured-title">latest <em>posts</em></h2>
+  <p class="featured-sub">a peek at what's new ✿</p>
+
+  <div class="videos">
+
+```
+<div class="video-card">
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joaniexoxo15/video/7606034260620774669" data-video-id="7606034260620774669" style="max-width: 605px; min-width: 325px;">
+    <section>
+      <a target="_blank" href="https://www.tiktok.com/@joaniexoxo15">@joaniexoxo15</a>
+    </section>
+  </blockquote>
+</div>
+
+<div class="video-card">
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@joaniexoxo15/video/7619840086661729550" data-video-id="7619840086661729550" style="max-width: 605px; min-width: 325px;">
+    <section>
+      <a target="_blank" href="https://www.tiktok.com/@joaniexoxo15">@joaniexoxo15</a>
+    </section>
+  </blockquote>
+</div>
+```
+
+  </div>
+
+  <footer>
+    made with <span class="heart">♥</span> &nbsp;·&nbsp; miss joan
+  </footer>
+
+</div>
+
+<script async src="https://www.tiktok.com/embed.js"></script>
+
+<script>
+  const btn = document.getElementById('musicBtn');
+  const audio = document.getElementById('bgMusic');
+  const icon = document.getElementById('musicIcon');
+  audio.volume = 0.4;
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.classList.add('playing');
+      icon.textContent = '♫';
+    } else {
+      audio.pause();
+      btn.classList.remove('playing');
+      icon.textContent = '♪';
+    }
+  });
+</script>
+
+</body>
+</html>
